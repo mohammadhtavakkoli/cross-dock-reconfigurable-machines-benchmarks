@@ -30,7 +30,7 @@ Each Excel workbook also reports the following information, where applicable:
 * Solution time in seconds
 * Time to best solution
 * Optimality gap
-* Solver status, such as `Optimal` or `Time Limit`
+* Solver status
 
 ## Computational Environment
 
