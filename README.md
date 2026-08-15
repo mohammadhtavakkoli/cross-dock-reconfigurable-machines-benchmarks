@@ -21,6 +21,28 @@ The benchmark set consists of 30 instances named `sample_01.xlsx` through `sampl
 * Instances 11–20: medium-sized instances
 * Instances 21–30: large-sized instances
 
+## Workbook Structure and Model-Parameter Mapping
+
+All 30 benchmark workbooks follow the same standardized worksheet structure. Except for the `Results` worksheet, each sheet defines one family of input parameters used by the mathematical and CP models. The data are stored in long format: the first columns identify the relevant indices, while the `val` column contains the numerical parameter value.
+
+The worksheet names correspond to those used by the Python data-loading functions. Where a worksheet name differs from the notation used in the manuscript, the corresponding manuscript parameter is also reported below.
+
+| Worksheet | Manuscript parameter       | Columns                        |
+| --------- | -------------------------- | ------------------------------ |
+| `scalars` | Sets and scalar parameters | `name`, `val`                  |
+| `ar`      | (ar_i)                     | `i`, `val`                     |
+| `arp`     | (ao_k)                     | `k`, `val`                     |
+| `H`       | (hi_{pi})                  | `p`, `i`, `val`                |
+| `Hp`      | (h_{pk})                   | `p`, `k`, `val`                |
+| `tt`      | (t_{jm})                   | `j`, `m`, `val`                |
+| `ttp`     | (tl_{ml})                  | `m`, `l`, `val`                |
+| `op`      | (o_{pmg})                  | `p`, `m`, `g`, `val`           |
+| `pr`      | (pr_{pmg})                 | `p`, `m`, `g`, `val`           |
+| `st`      | (st_{g_1g_2m})             | `m`, `g`, `gt`, `val`          |
+| `zp`      | (pd_{pik})                 | `p`, `i`, `k`, `val`           |
+| `Results` | Computational output       | Method and performance columns |
+
+
 ## Reported Computational Results
 
 Each Excel workbook also reports the following information, where applicable:
